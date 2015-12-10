@@ -1,2 +1,2 @@
-# calc
-Simple 2D math library for typescript &amp; javascript.
+# Calc
+A lightweight math lib for typescript/javascript. Specifically designed for 2D rendering.
