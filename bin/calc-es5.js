@@ -19,6 +19,15 @@ var Calc;
             enumerable: true,
             configurable: true
         });
+        Vector.prototype.clone = function (result) {
+            if (result) {
+                result.x = this.x;
+                result.y = this.y;
+            }
+            else
+                result = new Vector(this.x, this.y);
+            return result;
+        };
         Vector.prototype.normalize = function () {
             var len = this.length;
             if (len > 0) {
@@ -30,6 +39,7 @@ var Calc;
         Vector.prototype.setPolar = function (angle, length) {
             this.x = Math.cos(angle) * length;
             this.y = Math.sin(angle) * length;
+            return this;
         };
         Vector.prototype.turnLeft = function () {
             var x = this.x;

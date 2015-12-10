@@ -5,8 +5,9 @@ declare module Calc {
         constructor(x: number, y: number);
         length: number;
         angle: number;
+        clone(result?: Vector): Vector;
         normalize(): Vector;
-        setPolar(angle: number, length: number): void;
+        setPolar(angle: number, length: number): Vector;
         turnLeft(): Vector;
         turnRight(): Vector;
         static dist(a: Vector, b: Vector): number;

@@ -21,6 +21,18 @@ module Calc
             return Math.atan2(this.y, this.x);
         }
 
+        clone(result?:Vector):Vector
+        {
+            if (result)
+            {
+                result.x = this.x;
+                result.y = this.y;
+            }
+            else
+                result = new Vector(this.x, this.y);
+            return result;
+        }
+
         normalize():Vector
         {
             var len:number = this.length;
@@ -32,10 +44,11 @@ module Calc
             return this;
         }
 
-        setPolar(angle:number, length:number)
+        setPolar(angle:number, length:number):Vector
         {
             this.x = Math.cos(angle) * length;
             this.y = Math.sin(angle) * length;
+            return this;
         }
 
         turnLeft():Vector

@@ -11,6 +11,15 @@ var Calc;
         get angle() {
             return Math.atan2(this.y, this.x);
         }
+        clone(result) {
+            if (result) {
+                result.x = this.x;
+                result.y = this.y;
+            }
+            else
+                result = new Vector(this.x, this.y);
+            return result;
+        }
         normalize() {
             var len = this.length;
             if (len > 0) {
@@ -22,6 +31,7 @@ var Calc;
         setPolar(angle, length) {
             this.x = Math.cos(angle) * length;
             this.y = Math.sin(angle) * length;
+            return this;
         }
         turnLeft() {
             var x = this.x;
