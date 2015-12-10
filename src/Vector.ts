@@ -54,9 +54,14 @@ module Calc
             return this;
         }
 
-        static distance(a:Vector, b:Vector):number
+        static dist(a:Vector, b:Vector):number
         {
             return Math.sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
+        }
+
+        static sqrDist(a:Vector, b:Vector):number
+        {
+            return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
         }
 
         static dot(a:Vector, b:Vector):number

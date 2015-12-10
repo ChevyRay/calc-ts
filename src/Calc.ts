@@ -75,4 +75,14 @@ module Calc
     {
         return (2 * p0 - 2 * p1 + m1 + m0) * t * t * t + (3 * p1 - 3 * p0 - 2 * m0 - m1) * t * t + m0 * t + p0;
     }
+
+    export function dist(x0:number, y0:number, x1:number, y1:number):number
+    {
+        return Math.sqrt((x0 - x1) * (x0 - x1) + (y0 - y1) * (y0 - y1));
+    }
+
+    export function sqrDist(x0:number, y0:number, x1:number, y1:number):number
+    {
+        return (x0 - x1) * (x0 - x1) + (y0 - y1) * (y0 - y1);
+    }
 }

@@ -35,8 +35,11 @@ var Calc;
             this.y = x;
             return this;
         }
-        static distance(a, b) {
+        static dist(a, b) {
             return Math.sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
+        }
+        static sqrDist(a, b) {
+            return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
         }
         static dot(a, b) {
             return a.x * b.x + a.y * b.y;
@@ -398,4 +401,12 @@ var Calc;
         return (2 * p0 - 2 * p1 + m1 + m0) * t * t * t + (3 * p1 - 3 * p0 - 2 * m0 - m1) * t * t + m0 * t + p0;
     }
     Calc.hermite = hermite;
+    function dist(x0, y0, x1, y1) {
+        return Math.sqrt((x0 - x1) * (x0 - x1) + (y0 - y1) * (y0 - y1));
+    }
+    Calc.dist = dist;
+    function sqrDist(x0, y0, x1, y1) {
+        return (x0 - x1) * (x0 - x1) + (y0 - y1) * (y0 - y1);
+    }
+    Calc.sqrDist = sqrDist;
 })(Calc || (Calc = {}));

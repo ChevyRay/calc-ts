@@ -9,7 +9,8 @@ declare module Calc {
         setPolar(angle: number, length: number): void;
         turnLeft(): Vector;
         turnRight(): Vector;
-        static distance(a: Vector, b: Vector): number;
+        static dist(a: Vector, b: Vector): number;
+        static sqrDist(a: Vector, b: Vector): number;
         static dot(a: Vector, b: Vector): number;
         static cross(a: Vector, b: Vector): number;
     }
@@ -103,4 +104,6 @@ declare module Calc {
     function bezier4(a: number, b: number, c: number, d: number, t: number): number;
     function catmullRom(a: number, b: number, c: number, d: number, t: number): number;
     function hermite(p0: number, m0: number, p1: number, m1: number, t: number): number;
+    function dist(x0: number, y0: number, x1: number, y1: number): number;
+    function sqrDist(x0: number, y0: number, x1: number, y1: number): number;
 }
