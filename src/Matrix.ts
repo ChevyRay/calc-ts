@@ -1,4 +1,4 @@
-///<reference path="Vector.ts"/>
+///<reference path="Calc.ts"/>
 
 module Calc
 {

@@ -1,4 +1,4 @@
-"use strict";
+///<reference path="Strict.ts"/>
 ///<reference path="Matrix.ts"/>
 ///<reference path="Matrix3D.ts"/>
 ///<reference path="Rectangle.ts"/>

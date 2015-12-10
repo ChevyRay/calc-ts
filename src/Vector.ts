@@ -1,3 +1,5 @@
+///<reference path="Calc.ts"/>
+
 module Calc
 {
     export class Vector
